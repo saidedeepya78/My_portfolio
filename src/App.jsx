@@ -71,10 +71,12 @@ export default function App() {
         <Section id="contact" title="Contact" alt>
           <p className="prose">The best way to reach me is by email. I am happy to talk about roles, projects, or collaborations.</p>
           <div className="actions">
-            <a className="btn primary" href={`mailto:${profile.email}`}>{profile.email}</a>
+            <a className="btn primary" href={`mailto:${profile.email}`}>Email Me</a>
+            <a className="btn" href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`} {...ext}>Write in Gmail</a>
             <a className="btn" href={profile.linkedin} {...ext}>LinkedIn</a>
             <a className="btn" href={profile.github} {...ext}>GitHub</a>
           </div>
+          <p className="prose">Or write to {profile.email}</p>
         </Section>
       </main>
 
